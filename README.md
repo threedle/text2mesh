@@ -26,21 +26,21 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 
 #### Outputs
 <p float="center">
-<img alt="person" height="180" src="images/person.png" width="320"/>
-<img alt="batman geometry" height="180" src="images/batman_init.png" width="320"/>
-<img alt="batman style" height="180" src="images/batman_final.png" width="320"/>
+<img alt="person" height="135" src="images/person.png" width="240"/>
+<img alt="batman geometry" height="135" src="images/batman_init.png" width="240"/>
+<img alt="batman style" height="135" src="images/batman_final.png" width="240"/>
 </p>
 
 <p float="center">
-<img alt="shoe" height="180" src="images/shoe.png" width="320"/>
-<img alt="shoe geometry" height="180" src="images/shoe_init.png" width="320"/>
-<img alt="shoe style" height="180" src="images/shoe_final.png" width="320"/>
+<img alt="shoe" height="135" src="images/shoe.png" width="240"/>
+<img alt="shoe geometry" height="135" src="images/shoe_init.png" width="240"/>
+<img alt="shoe style" height="135" src="images/shoe_final.png" width="240"/>
 </p>
 
 <p float="center">
-<img alt="vase" height="180" src="images/vase.png" width="320"/>
-<img alt="vase geometry" height="180" src="images/vase_init.png" width="320"/>
-<img alt="vase style" height="180" src="images/vase_final.png" width="320"/>
+<img alt="vase" height="135" src="images/vase.png" width="240"/>
+<img alt="vase geometry" height="135" src="images/vase_init.png" width="240"/>
+<img alt="vase style" height="135" src="images/vase_final.png" width="240"/>
 </p>
 
 ## Citation
