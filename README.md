@@ -6,6 +6,8 @@
 ```
 conda env create --file text2mesh.yml
 conda activate text2mesh
+pip install git+https://github.com/openai/CLIP.git
+pip install git+https://github.com/NVIDIAGameWorks/kaolin
 ```
 
 ## System Requirements
@@ -18,6 +20,10 @@ Call the below shell scripts to generate example styles.
 ```bash
 # batman 
 ./demo/run_batman.sh
+# astronaut 
+./demo/run_astronaut.sh
+# steve jobs 
+./demo/run_jobs.sh
 # shoe made of cactus 
 ./demo/run_shoe.sh
 # colorful crochet vase 
