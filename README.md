@@ -40,6 +40,18 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 </p>
 
 <p float="center">
+<img alt="person" height="135" src="images/person.png" width="240"/>
+<img alt="steve jobs geometry" height="135" src="images/jobs_init.png" width="240"/>
+<img alt="batman style" height="135" src="images/jobs_final.png" width="240"/>
+</p>
+
+<p float="center">
+<img alt="person" height="135" src="images/person.png" width="240"/>
+<img alt="astronaut geometry" height="135" src="images/astronaut_init.png" width="240"/>
+<img alt="astronaut style" height="135" src="images/astronaut_final.png" width="240"/>
+</p>
+
+<p float="center">
 <img alt="shoe" height="135" src="images/shoe.png" width="240"/>
 <img alt="shoe geometry" height="135" src="images/shoe_init.png" width="240"/>
 <img alt="shoe style" height="135" src="images/shoe_final.png" width="240"/>
