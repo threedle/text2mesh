@@ -26,11 +26,11 @@ class ProgressiveEncoding(nn.Module):
         return x * alpha
 
 
-class NeuralTextureBranched(nn.Module):
+class NeuralStyleField(nn.Module):
     # Same base then split into two separate modules 
     def __init__(self, sigma, depth, width, encoding, colordepth=2, normdepth=2, normratio=0.1, clamp=None,
                  normclamp=None,niter=6000, input_dim=3, progressive_encoding=True, exclude=0):
-        super(NeuralTextureBranched, self).__init__()
+        super(NeuralStyleField, self).__init__()
         self.pe = ProgressiveEncoding(mapping_size=width, T=niter, d=input_dim)
         self.clamp = clamp
         self.normclamp = normclamp

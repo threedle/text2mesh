@@ -9,9 +9,9 @@ conda activate text2mesh
 ```
 
 ## System Requirements
-- Python == 3.7
-- CUDA == 10.2.0
-- GPU w/ 8 GB ram, CUDA 10.2 compatible
+- Python 3.7
+- CUDA 10.2
+- GPU w/ minimum 8 GB ram
 
 ## Run examples
 Call the below shell scripts to generate example styles. 

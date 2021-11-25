@@ -3,7 +3,7 @@ from tqdm import tqdm
 import kaolin.ops.mesh
 import kaolin as kal
 import torch
-from neural_texture import NeuralTextureBranched
+from neural_style_field import NeuralStyleField
 from utils import device
 from render import Renderer
 from mesh import Mesh
@@ -105,7 +105,7 @@ def run_branched(args):
     input_dim = 6 if args.input_normals else 3
     if args.only_z:
         input_dim = 1
-    mlp = NeuralTextureBranched(args.sigma, args.depth, args.width, 'gaussian', args.colordepth, args.normdepth,
+    mlp = NeuralStyleField(args.sigma, args.depth, args.width, 'gaussian', args.colordepth, args.normdepth,
                                 args.normratio, args.clamp, args.normclamp, niter=args.n_iter,
                                 progressive_encoding=args.pe, input_dim=input_dim, exclude=args.exclude).to(device)
     mlp.reset_weights()
