@@ -1,4 +1,5 @@
 # Text2Mesh
+![crochet candle](images/candle.gif)
 **Text2Mesh** is a method for text-driven stylization of a 3D mesh, as described in "Text2Mesh: Text-Driven Neural Stylization for Meshes" (forthcoming).
 
 ## Installation
@@ -16,11 +17,11 @@ conda activate text2mesh
 Call the below shell scripts to generate example styles. 
 ```bash
 # batman 
-./run_batman.sh
+./demo/run_batman.sh
 # shoe made of cactus 
-./run_shoe.sh
+./demo/run_shoe.sh
 # colorful crochet vase 
-./run_vase.sh
+./demo/run_vase.sh
 ```
 The outputs will be saved to `results/demo`, with the stylized .obj files, colored and uncolored render views, and screenshots during training.
 
