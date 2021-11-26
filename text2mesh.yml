@@ -4,6 +4,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - python=3.7
   - _libgcc_mutex=0.1
   - _openmp_mutex=4.5
   - blas=1.0
@@ -97,3 +98,5 @@ dependencies:
     - scipy==1.5.2
     - siren-pytorch==0.1.5
     - usd-core==21.8
+    - git+https://github.com/openai/CLIP.git
+    - git+https://github.com/NVIDIAGameWorks/kaolin
