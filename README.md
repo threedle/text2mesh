@@ -67,7 +67,7 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 ```
 @article{text2mesh,
     author = {Michel, Oscar
-              and Baron-On, Roi
+              and Bar-On, Roi
               and Liu, Richard
               and Benaim, Sagie
               and Hanocka, Rana
