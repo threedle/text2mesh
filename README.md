@@ -1,20 +1,23 @@
 # Text2Mesh
+[![arXiv](https://img.shields.io/badge/arXiv-Text2Mesh-b31b1b.svg)](https://arxiv.org/abs/1234.56789)
 ![crochet candle](images/candle.gif)
 **Text2Mesh** is a method for text-driven stylization of a 3D mesh, as described in "Text2Mesh: Text-Driven Neural Stylization for Meshes" (forthcoming).
 
 ## Installation
+<details>
+  <summary>Getting started _[click to expand]_</summary>
+
 **Note:** The below installation will fail if run on something other than a CUDA GPU machine.
 ```
 conda env create --file text2mesh.yml
 conda activate text2mesh
-pip install git+https://github.com/openai/CLIP.git
-pip install git+https://github.com/NVIDIAGameWorks/kaolin
 ```
 
 ## System Requirements
 - Python 3.7
 - CUDA 10.2
 - GPU w/ minimum 8 GB ram
+</details>
 
 ## Run examples
 Call the below shell scripts to generate example styles. 
