@@ -22,10 +22,6 @@ conda activate text2mesh
 ## Run examples
 Call the below shell scripts to generate example styles. 
 ```bash
-# batman 
-./demo/run_batman.sh
-# astronaut 
-./demo/run_astronaut.sh
 # steve jobs 
 ./demo/run_jobs.sh
 # shoe made of cactus 
@@ -38,20 +34,8 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 #### Outputs
 <p float="center">
 <img alt="person" height="135" src="images/person.png" width="240"/>
-<img alt="batman geometry" height="135" src="images/batman_init.png" width="240"/>
-<img alt="batman style" height="135" src="images/batman_final.png" width="240"/>
-</p>
-
-<p float="center">
-<img alt="person" height="135" src="images/person.png" width="240"/>
 <img alt="steve jobs geometry" height="135" src="images/jobs_init.png" width="240"/>
 <img alt="batman style" height="135" src="images/jobs_final.png" width="240"/>
-</p>
-
-<p float="center">
-<img alt="person" height="135" src="images/person.png" width="240"/>
-<img alt="astronaut geometry" height="135" src="images/astronaut_init.png" width="240"/>
-<img alt="astronaut style" height="135" src="images/astronaut_final.png" width="240"/>
 </p>
 
 <p float="center">
