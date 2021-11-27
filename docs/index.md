@@ -4,7 +4,7 @@ layout: default
 
 <center>
 
-<img src="figures/hero/animals387subdiv.gif" alt="horse with poncho" width="400"/ <img src="figures/hero/person.gif" alt="batman" width="400"/>
+<img src="figures/hero/horse.gif" alt="horse with poncho" width="400"/ <img src="figures/hero/person.gif" alt="batman" width="400"/>
 <p><em>examples of meshes yielded by <i>NSF</i></em></p>
 
 </center>
