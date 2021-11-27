@@ -5,11 +5,13 @@ layout: default
 
 <img src="figures/hero/animals387subdiv.gif" alt="horse with poncho" width="400"/>  <img src="figures/hero/person.gif" alt="batman" width="400"/>
 
-*examples of meshes yielded by _NSF_*
+<p><em>examples of meshes yielded by <i>NSF</i></em></p>
 
-* * *
+
 
 </center>
+
+* * *
 
 > In this work, we develop intuitive controls for editing
 > the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider
