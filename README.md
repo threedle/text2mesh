@@ -3,23 +3,23 @@
 ![crochet candle](images/vases.gif)
 **Text2Mesh** is a method for text-driven stylization of a 3D mesh, as described in "Text2Mesh: Text-Driven Neural Stylization for Meshes" (forthcoming).
 
-## Installation
-<details>
-  <summary>Getting started _[click to expand]_</summary>
+## Getting Started
+### Installation
 
 **Note:** The below installation will fail if run on something other than a CUDA GPU machine.
 ```
 conda env create --file text2mesh.yml
 conda activate text2mesh
 ```
-
-## System Requirements
+<details>
+<summary>System requirements <em>[click to expand]</em> </summary>
+### System Requirements
 - Python 3.7
 - CUDA 10.2
 - GPU w/ minimum 8 GB ram
 </details>
 
-## Run examples
+### Run examples
 Call the below shell scripts to generate example styles. 
 ```bash
 # steve jobs 
