@@ -8,5 +8,5 @@ remote_theme: pages-themes/cayman@v0.2.0
 paper:
   url: arxiv.com
   supp_url: arxiv.com/supp
-  authors: Oscar Michel*<sup>1</sup>, Roi Bar-On*<sup>1,2</sup>, Richard Liu<sup>1</sup>, Rana Hanocka<sup>1</sup>, Sagie Benaim<sup>2</sup>
-  affiliations: <sup>1</sup>Universitry Of Chicago,  <sup>2</sup>Tel-Aviv University
+  authors: Oscar Michel*<sup>1</sup>, Roi Bar-On*<sup>1,2</sup>, Richard Liu*<sup>1</sup>, Sagie Benaim<sup>2</sup>, Rana Hanocka<sup>1</sup>
+  affiliations: <sup>1</sup>University Of Chicago,  <sup>2</sup>Tel Aviv University
