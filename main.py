@@ -11,6 +11,7 @@ from utils import clip_model
 from Normalization import MeshNormalizer
 from utils import preprocess, add_vertices, sample_bary
 import numpy as np
+import random
 import copy
 import torchvision
 import os
@@ -19,11 +20,12 @@ import argparse
 from pathlib import Path
 from torchvision import transforms
 
-
 def run_branched(args):
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
     torch.manual_seed(args.seed)
+    random.seed(args.seed)
+    np.random.seed(args.seed)
 
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
