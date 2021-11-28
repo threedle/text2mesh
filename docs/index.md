@@ -58,7 +58,7 @@ _NSF_ is capable of generating small deformations over the same source mesh, bas
               and Benaim, Sagie
               and Hanocka, Rana
               },
-    title = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
+    title = {{Text2Mesh: Text-Driven Neural Stylization for Meshes}},
     journal = {TODO: ARXIV},
     year  = {2021}
 }
