@@ -23,9 +23,12 @@ from torchvision import transforms
 def run_branched(args):
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 
+    # Constrain all sources of randomness
     torch.manual_seed(args.seed)
     random.seed(args.seed)
     np.random.seed(args.seed)
+    torch.backends.cudnn.benchmark = False
+    torch.use_deterministic_algorithms(True)
 
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
