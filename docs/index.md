@@ -46,12 +46,12 @@ Even though our method is based on [CLIP](https://openai.com/blog/clip/), a join
 ## Morphs
 _NSF_ is capable of generating small deformations over the same source mesh, based on different targets. Thus, it's very natural to morph different results.
 
-
+<center>
  <img src="figures/morphs/horse.gif" alt="horse" width="300"/>
  <img src="figures/morphs/vase.gif" alt="vase" width="300"/>
  <img src="figures/morphs/camel.gif" alt="camel" width="300"/>
  <img src="figures/morphs/chair.gif" alt="chair" width="300"/>
-
+</center>
 ## Citation
 ```
 @article{text2mesh,
