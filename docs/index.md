@@ -5,7 +5,9 @@ layout: default
 <center>
 
 <img src="figures/hero/horse.gif" alt="horse with poncho" width="400"/> <img src="figures/hero/person.gif" alt="batman" width="400"/>
-<p><em>examples of meshes yielded by <i>NSF</i></em></p>
+<p><em>
+Text2Mesh produces color and geometric details over a variety of source meshes, driven by a target text prompt. Our stylization results coherently blend unique and ostensibly unrelated combinations of text, capturing both global semantics and part-aware attributes.
+</em></p>
 
 </center>
 
@@ -21,9 +23,10 @@ to modify style, we obtain a similarity score between a text
 prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires
 neither a pre-trained generative model nor a specialized
 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does
-not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a
+not require parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a
 wide variety of 3D meshes.
 
+## Overview
 <center>
 
 <img src="figures/pipeline.svg" alt="Pipeline" width="400"/>
