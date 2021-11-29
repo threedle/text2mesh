@@ -25,10 +25,12 @@ def run_branched(args):
 
     # Constrain all sources of randomness
     torch.manual_seed(args.seed)
+    torch.cuda.manual_seed(args.seed)
+    torch.cuda.manual_seed_all(args.seed)
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.backends.cudnn.benchmark = False
-    torch.use_deterministic_algorithms(True)
+    torch.backends.cudnn.deterministic = True
 
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
