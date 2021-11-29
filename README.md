@@ -34,9 +34,27 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 
 #### Outputs
 <p float="center">
+<img alt="alien" height="135" src="images/alien.png" width="240"/>
+<img alt="alien geometry" height="135" src="images/alien_cobble_init.png" width="240"/>
+<img alt="alien style" height="135" src="images/alien_cobble_final.png" width="240"/>
+</p>
+
+<p float="center">
+<img alt="alien" height="135" src="images/alien.png" width="240"/>
+<img alt="alien geometry" height="135" src="images/alien_wood_init.png" width="240"/>
+<img alt="alien style" height="135" src="images/alien_wood_final.png" width="240"/>
+</p>
+
+<p float="center">
+<img alt="candle" height="135" src="images/candle.png" width="240"/>
+<img alt="candle geometry" height="135" src="images/candle_init.png" width="240"/>
+<img alt="candle style" height="135" src="images/candle_final.png" width="240"/>
+</p>
+
+<p float="center">
 <img alt="person" height="135" src="images/person.png" width="240"/>
-<img alt="steve jobs geometry" height="135" src="images/jobs_init.png" width="240"/>
-<img alt="batman style" height="135" src="images/jobs_final.png" width="240"/>
+<img alt="ninja geometry" height="135" src="images/ninja_init.png" width="240"/>
+<img alt="ninja style" height="135" src="images/ninja_final.png" width="240"/>
 </p>
 
 <p float="center">
@@ -49,6 +67,18 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 <img alt="vase" height="135" src="images/vase.png" width="240"/>
 <img alt="vase geometry" height="135" src="images/vase_init.png" width="240"/>
 <img alt="vase style" height="135" src="images/vase_final.png" width="240"/>
+</p>
+
+<p float="center">
+<img alt="lamp" height="135" src="images/lamp.png" width="240"/>
+<img alt="lamp geometry" height="135" src="images/lamp_init.png" width="240"/>
+<img alt="lamp style" height="135" src="images/lamp_final.png" width="240"/>
+</p>
+
+<p float="center">
+<img alt="horse" height="135" src="images/horse.png" width="240"/>
+<img alt="horse geometry" height="135" src="images/horse_init.png" width="240"/>
+<img alt="horse style" height="135" src="images/horse_final.png" width="240"/>
 </p>
 
 ## Citation
