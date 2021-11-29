@@ -23,12 +23,13 @@ conda activate text2mesh
 ### Run examples
 Call the below shell scripts to generate example styles. 
 ```bash
-# steve jobs 
-./demo/run_jobs.sh
+# cobblestone alien
+./demo/run_alien_cobble.sh
 # shoe made of cactus 
 ./demo/run_shoe.sh
-# colorful crochet vase 
-./demo/run_vase.sh
+# lamp made of brick
+./demo/run_lamp.sh
+# ...
 ```
 The outputs will be saved to `results/demo`, with the stylized .obj files, colored and uncolored render views, and screenshots during training.
 
