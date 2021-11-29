@@ -28,7 +28,6 @@ def run_branched(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.backends.cudnn.benchmark = False
-    torch.use_deterministic_algorithms(True)
 
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
