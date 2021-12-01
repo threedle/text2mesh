@@ -4,7 +4,7 @@ layout: default
 
 <center>
 
-<img src="figures/hero/horse.gif" alt="horse with poncho" width="400"/> <img src="figures/hero/person.gif" alt="batman" width="400"/>
+<img src="figures/hero/dog.gif" alt="a dog wearing poncho" width="250"/> <img src="figures/hero/person.gif" alt="batman" width="250"/><img src="figures/hero/lamp.gif" alt="a lamp made of wood" width="250"/> <img src="figures/hero/candle.gif" alt="a candle made of chainmail" width="250"/>
 <p><em>
 Text2Mesh produces color and geometric details over a variety of source meshes, driven by a target text prompt. Our stylization results coherently blend unique and ostensibly unrelated combinations of text, capturing both global semantics and part-aware attributes.
 </em></p>
@@ -52,6 +52,33 @@ _NSF_ is capable of generating small deformations over the same source mesh, bas
  <img src="figures/morphs/camel.gif" alt="camel" width="500"/>
  <img src="figures/morphs/chair.gif" alt="chair" width="500"/>
 </center>
+
+## Coupling
+We observe a strong correlation between the displacements and the coloring that _NSF_ produces, which results in a consistent stylized 3D mesh.
+
+<center>
+ <img src="figures/coupling/donut.gif" alt="a donut with sprinkles" width="600"/>
+</center>
+
+## Beyond Text-Driven Manipulation
+We further leverage the joint vision-language embedding space to guide our optimization with other targets: images and meshes.
+
+### Target Image
+<center>
+ <img src="figures/target-image/cobblestone.jpeg" alt="cobblestone" width="120"/>
+ <img src="figures/target-image/cobblestone.gif" alt="cobblestone" width="300"/>
+ <img src="figures/target-image/crochet.jpeg" alt="crochet" width="120"/>
+ <img src="figures/target-image/crochet.gif" alt="crochet iron" width="300"/>
+ <img src="figures/target-image/fishscales.jpeg" alt="fish scales" width="120"/>
+ <img src="figures/target-image/fishscales.gif" alt="fish scales pig" width="300"/>
+</center>
+
+### Target Mesh
+<center>
+ <img src="figures/target-mesh/cow.png" alt="cow" width="300"/>
+ <img src="figures/target-mesh/armadillo.gif" alt="armadillo" width="300"/>
+</center>
+
 ## Citation
 ```
 @article{text2mesh,
