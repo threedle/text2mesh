@@ -89,6 +89,7 @@ We further leverage the joint vision-language embedding space to demonstrate the
 </center>
 
 ## Citation
+
 ```
 @article{text2mesh,
     author = {Michel, Oscar
