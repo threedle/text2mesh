@@ -29,7 +29,7 @@ wide variety of 3D meshes.
 ## Overview
 <center>
 
-<img src="figures/pipeline.svg" alt="Pipeline" width="400"/>
+<img src="figures/overview/pipeline.png" alt="Pipeline" width="400"/>
 <p><em>The pipeline of our method</em></p>
 
 </center>
