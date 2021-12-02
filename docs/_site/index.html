@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Text2Mesh Text-Driven Neural Stylization for Meshes | Oscar Michel1, Roi Bar-On1,2, Richard Liu*1, Sagie Benaim2, Rana Hanocka1</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Text2Mesh Text-Driven Neural Stylization for Meshes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Oscar Michel1, Roi Bar-On1,2, Richard Liu*1, Sagie Benaim2, Rana Hanocka1" />
+<meta property="og:description" content="Oscar Michel1, Roi Bar-On1,2, Richard Liu*1, Sagie Benaim2, Rana Hanocka1" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Text2Mesh Text-Driven Neural Stylization for Meshes" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Text2Mesh Text-Driven Neural Stylization for Meshes" />
+<script type="application/ld+json">
+{"description":"Oscar Michel1, Roi Bar-On1,2, Richard Liu*1, Sagie Benaim2, Rana Hanocka1","url":"http://localhost:4000/","@type":"WebSite","headline":"Text2Mesh Text-Driven Neural Stylization for Meshes","name":"Text2Mesh Text-Driven Neural Stylization for Meshes","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=22bf312d7d1fcccb12cc1746e0be2bea378b0c22">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Text2Mesh: Text-Driven Neural Stylization for Meshes</h1>
+      <h2 class="project-tagline">Oscar Michel*<sup>1</sup>, Roi Bar-On*<sup>1,2</sup>, Richard Liu*<sup>1</sup>, Sagie Benaim<sup>2</sup>, Rana Hanocka<sup>1</sup></h2>
+      <p class="project-affiliation"><sup>1</sup>University Of Chicago, &nbsp; <sup>2</sup>Tel Aviv University</p>
+      <p class="project-thanks">*Equal contribution.</p>
+
+        
+        <a href="https://github.com/threedle/text2mesh" class="btn">Code</a>
+      
+        <a href="arxiv.com" class="btn">Paper</a>
+        <a href="arxiv.com/supp" class="btn">Supplementary</a>
+
+        
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <center>
+
+<img src="figures/teaser/ironman_crop.gif" alt="ironman" width="150" /> <img src="figures/teaser/lamp_crop.gif" alt="a lamp made of brick" width="250" /> <img src="figures/teaser/candle_crop.gif" alt="a candle made of colorful crochet" width="150" /> <img src="figures/teaser/horse_crop.gif" alt="a horse wearing an astronaut suit" width="200" />
+<p><em>
+Text2Mesh produces color and geometric details over a variety of source meshes, driven by a target text prompt. Our stylization results coherently blend unique and ostensibly unrelated combinations of text, capturing both global semantics and part-aware attributes.
+</em></p>
+
+</center>
+
+<hr />
+
+<h2 id="abstract">Abstract</h2>
+
+<p>In this work, we develop intuitive controls for editing the style of 3D objects. Our framework, Text2Mesh, stylizes a 3D mesh by predicting color and local geometric details which conform to a target text prompt. We consider a disentangled representation of a 3D object using a fixed mesh input (content) coupled with a learned neural network, which we term neural style field network. In order to modify style, we obtain a similarity score between a text prompt (describing style) and a stylized mesh by harnessing the representational power of CLIP. Text2Mesh requires neither a pre-trained  generative model nor a specialized 3D mesh dataset. It can handle low-quality meshes (non-manifold, boundaries, etc.) with arbitrary genus, and does not require UV parameterization. We demonstrate the ability of our technique to synthesize a myriad of styles over a wide variety of 3D meshes.</p>
+
+<h2 id="overview">Overview</h2>
+<center>
+
+<img src="figures/pipeline.jpg" alt="Pipeline" width="1000" />
+<p><em>Text2Mesh Pipeline</em></p>
+
+</center>
+
+<h2 id="view-consistency">View Consistency</h2>
+<p>We use <a href="https://openai.com/blog/clip/">CLIP’s</a> ability to jointly embed text and images to produce view-consistent and semantically meaningful stylizations over the entire 3D shape.</p>
+<center>
+<img src="figures/multiple-views/croissant_final_crop.gif" alt="croissant made of colorful crochet" width="500" />
+<img src="figures/multiple-views/armadillo_final_crop.gif" alt="armadillo made of gold" width="500" />
+<img src="figures/multiple-views/donkey_final_crop.gif" alt="donkey wearing jeans" width="500" />
+</center>
+
+<h2 id="general-stylization">General Stylization</h2>
+<p>For the same input mesh, Text2Mesh is capable of generating a variety of different local geometric displacements to synthesize a wide range of styles.</p>
+<center>
+ <img src="figures/labeled_morphs/vase_init.gif" alt="vase" width="400" />
+ <img src="figures/labeled_morphs/vase_full.gif" alt="vase" width="400" />
+ <img src="figures/morphs/vase_init_crop.gif" alt="vase" width="400" />
+ <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400" />
+ <img src="figures/morphs/donut_init_crop.gif" alt="donut" width="400" />
+ <img src="figures/morphs/donut_full_crop.gif" alt="donut" width="400" />
+<img src="figures/morphs/camel_init_crop.gif" alt="camel" width="400" />
+ <img src="figures/morphs/camel_full_crop.gif" alt="camel" width="400" />
+<img src="figures/morphs/chair_init_crop.gif" alt="chair" width="400" />
+ <img src="figures/morphs/chair_full_crop.gif" alt="chair" width="400" />
+<img src="figures/morphs/alien_init_crop.gif" alt="alien" width="400" />
+ <img src="figures/morphs/alien_full_crop.gif" alt="alien" width="400" />
+</center>
+
+<h2 id="beyond-text-driven-manipulation">Beyond Text-Driven Manipulation</h2>
+<p>We further leverage the joint vision-language embedding space to demonstrate the multi-modal stylization capabilities of our method.</p>
+
+<h3 id="target-image">Target Image</h3>
+<center>
+ <img src="figures/target-image/bucket_cobble.gif" alt="bucket" width="340" />
+<br />
+ <img src="figures/target-image/pig_fish.gif" alt="pig" width="500" />
+<br />
+ <img src="figures/target-image/iron_crochet.gif" alt="iron" width="450" />
+</center>
+
+<h3 id="target-mesh">Target Mesh</h3>
+<center>
+ <img src="figures/target-mesh/armadillo_final.gif" alt="armadillo" width="400" />
+</center>
+
+<h2 id="citation">Citation</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{text2mesh,
+    author = {Michel, Oscar
+              and Bar-On, Roi
+              and Liu, Richard
+              and Benaim, Sagie
+              and Hanocka, Rana
+              },
+    title = ,
+    journal = {TODO: ARXIV},
+    year  = {2021}
+}
+</code></pre></div></div>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/threedle/text2mesh">text2mesh</a> is maintained by <a href="https://github.com/threedle">threedle</a>.</span>
+        
+      </footer>
+    </main>
+  </body>
+</html>
