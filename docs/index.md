@@ -19,21 +19,8 @@ In this work, we develop intuitive controls for editing the style of 3D objects.
 
 ## Overview
 <center>
-
-<img src="figures/overview/pipeline.png" alt="Pipeline" width="400"/>
-<p><em>The pipeline of our method</em></p>
-
-</center>
-
-
-## Multiple views
-Even though our method is based on [CLIP](https://openai.com/blog/clip/), a joint model of image and text, it is able to produce coherent, consistent, and sensible results across multiple views.
-<center>
-<img src="figures/multiple-views/ironman.gif" alt="ironman" width="500"/>
-<p><em>Ironman from any azimuth </em></p>
 <img src="figures/pipeline.jpg" alt="Pipeline" width="1000"/>
 <p><em>Text2Mesh Pipeline</em></p>
-
 </center>
 
 ## View Consistency
