@@ -20,7 +20,7 @@ In this work, we develop intuitive controls for editing the style of 3D objects.
 ## Overview
 <center>
 <img src="figures/pipeline.jpg" alt="Pipeline" width="1000"/>
-<p><em>Text2Mesh Pipeline</em></p>
+<p><em>Text2Mesh modifies an input mesh to conform to the target text by predicting color and geometric details. The weights of the neural style network are optimized by rendering multiple 2D images and applying 2D augmentations, which are given a similarity score to the target from the CLIP-based semantic loss.</em></p>
 </center>
 
 ## View Consistency
