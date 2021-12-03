@@ -8,6 +8,6 @@ plugins:
   - jekyll-remote-theme
 
 paper:
-  url: arxiv.com
+  url: https://www.dropbox.com/s/hbzq7xp95tr1788/text2mesh-preprint.pdf?dl=0
   supp_url: arxiv.com/supp
   affiliations: <sup>1</sup>University Of Chicago, &nbsp; <sup>2</sup>Tel Aviv University
