@@ -1,0 +1,16 @@
+title: Text2Mesh Text-Driven Neural Stylization for Meshes
+description: Oscar Michel*<sup>1</sup>, Roi Bar-On*<sup>1,2</sup>, Richard Liu*<sup>1</sup>, Sagie Benaim<sup>2</sup>, Rana Hanocka<sup>1</sup>
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+colors:
+    gradient_left: "#155799"
+    gradient_right: "#36008d"
+
+paper:
+  url: https://www.dropbox.com/s/hbzq7xp95tr1788/text2mesh-preprint.pdf?dl=0
+  supp_url: arxiv.com/supp
+  affiliations: <sup>1</sup>University Of Chicago, &nbsp; <sup>2</sup>Tel Aviv University
