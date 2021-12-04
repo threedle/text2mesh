@@ -89,7 +89,7 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 ## Beyond Text-Driven Manipulation
 We further leverage the joint vision-language embedding space to demonstrate the multi-modal stylization capabilities of our method.
 
-### Target Image
+### Image and Mesh Targets
 <center>
 <div class="carousel">
     <div class="item">
