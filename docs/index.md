@@ -30,21 +30,20 @@ In this work, we develop intuitive controls for editing the style of 3D objects.
 ## View Consistency
 We use [CLIP's](https://openai.com/blog/clip/) ability to jointly embed text and images to produce view-consistent and semantically meaningful stylizations over the entire 3D shape.
 <center>
-<div class="carousel">
-    <div class="item">
-        <img src="figures/multiple-views/croissant_final_crop.gif" alt="croissant made of colorful crochet" width="500"/>
-        <p>a croissant made of colorful crochet</p>
-    </div>
-    <div class="item">
-        <img src="figures/multiple-views/armadillo_final_crop.gif" alt="armadillo made of gold" width="500"/>
-        <p>armadillo made of gold</p>
-    </div>
-    <div class="item">
-        <img src="figures/multiple-views/donkey_final_crop.gif" alt="donkey wearing jeans" width="500"/>
-        <p>donkey wearing jeans</p>
-    </div>
-</div>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/multiple-views/croissant_final_crop.gif" alt="croissant made of colorful crochet" width="250"/>
+    <figcaption style="text-align:center">croissant made of colorful crochet</figcaption>
+</figure>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/multiple-views/armadillo_final_crop.gif" alt="armadillo made of gold" width="250"/>
+    <figcaption style="text-align:center">armadillo made of gold</figcaption>
+</figure>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/multiple-views/donkey_final_crop.gif" alt="donkey wearing jeans" width="250"/>
+    <figcaption style="text-align:center">donkey wearing jeans</figcaption>
+</figure>
 </center>
+
 ## General Stylization
 For the same input mesh, Text2Mesh is capable of generating a variety of different local geometric displacements to synthesize a wide range of styles.
 <center>
@@ -75,15 +74,13 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 ## Ablations
 We show the distinct effect of each of our design choices on the quality of the final stylization through a series of ablations.
 <center>
-<div class="carousel">
-<div class="item"><img src="figures/ablation/candle_base_crop.gif" width="200"/><p>source</p></div>
-<div class="item"><img src="figures/ablation/candle_full_crop.gif" width="200"/><p><i>full</i></p></div>
-<div class="item"><img src="figures/ablation/candle_ablnetwork_crop.gif" width="200"/><p><i>-net</i></p></div>
-<div class="item"><img src="figures/ablation/candle_ablaug_crop.gif" width="200"/><p><i>-aug</i></p></div>
-<div class="item"><img src="figures/ablation/candle_ablffn_crop.gif" width="200"/><p><i>-FFN</i></p></div>
-<div class="item"><img src="figures/ablation/candle_nocrop_crop.gif" width="200"/><p><i>-crop</i></p></div>
-<div class="item"><img src="figures/ablation/candle_nogeo_crop.gif" width="200"/><p><i>-displ</i></p></div>
-</div>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_base_crop.gif" width="100"/><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_full_crop.gif" width="100"/><figcaption style="text-align:center"><i>full</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablnetwork_crop.gif" width="100"/><figcaption style="text-align:center"><i>-net</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablaug_crop.gif" width="100"/><figcaption style="text-align:center"><i>-aug</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablffn_crop.gif" width="100"/><figcaption style="text-align:center"><i>-FFN</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_nocrop_crop.gif" width="100"/><figcaption style="text-align:center"><i>-crop</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_nogeo_crop.gif" width="100"/><figcaption style="text-align:center"><i>-displ</i></figcaption></figure>
 <p><em>Ablation on the priors used in our method (<i>full</i>) for a candle mesh and target ‘Candle made of bark’: w/o our style field network (<i>−net</i>), w/o 2D augmentations (<i>−aug</i>), w/o positional encoding (<i>−FFN</i>), w/o crop augmentations for ψlocal (<i>−crop</i>), w/o the geometry-only component of Lsim (<i>−displ</i>), and learning over a 2D plane in 3D space (<i>−3D</i>).</em></p>
 </center>
 
@@ -102,25 +99,22 @@ We further leverage the joint vision-language embedding space to demonstrate the
 
 ### Image and Mesh Targets
 <center>
-<div class="carousel">
-    <div class="item">
-        <img src="figures/target-image/bucket_cobble.gif" alt="bucket" width="340"/>
-        <p>image target</p>
-    </div>
-    <div class="item">
-        <img src="figures/target-image/pig_fish.gif" alt="pig" width="500"/>
-        <p>image target</p>
-    </div>
-    <div class="item">
-        <img src="figures/target-image/iron_crochet.gif" alt="iron" width="450"/>
-        <p>image target</p>
-    </div>
-    <div class="item">
-        <img src="figures/target-mesh/armadillo_final.gif" alt="armadillo" width="400"/>
-        <p>mesh target</p>
-    </div>
- 
- </div>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/target-image/bucket_cobble.gif" alt="bucket" width="150"/>
+    <figcaption style="text-align:center">image target</figcaption>
+</figure>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/target-image/pig_fish.gif" alt="pig" width="220"/>
+    <figcaption style="text-align:center">image target</figcaption>
+</figure>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/target-image/iron_crochet.gif" alt="iron" width="200"/>
+    <figcaption style="text-align:center">image target</figcaption>
+</figure>
+<figure style="display:inline-block;margin:0;padding:0">
+    <img src="figures/target-mesh/armadillo_final.gif" alt="armadillo" width="220"/>
+    <figcaption style="text-align:center">mesh target</figcaption>
+</figure>
 </center>
 
 ## Citation
