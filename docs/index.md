@@ -50,10 +50,6 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 <center>
 <div class="double-carousel">
     <div class="item">
-        <img src="figures/labeled_morphs/vase_init.gif" alt="vase" width="400"/>
-        <img src="figures/labeled_morphs/vase_full.gif" alt="vase" width="400"/>
-    </div>
-    <div class="item">
         <img src="figures/morphs/vase_init_crop.gif" alt="vase" width="400"/>
         <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400"/>
     </div>
