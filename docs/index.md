@@ -76,13 +76,14 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 ## Ablations
 We show the distinct effect of each of our design choices on the quality of the final stylization through a series of ablations.
 <center>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_base_crop.gif" width="100"/><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_base_crop.gif" width="90"/><figcaption style="text-align:center">source</figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_full_crop.gif" width="100"/><figcaption style="text-align:center"><i>full</i></figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablnetwork_crop.gif" width="100"/><figcaption style="text-align:center"><i>-net</i></figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablaug_crop.gif" width="100"/><figcaption style="text-align:center"><i>-aug</i></figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablffn_crop.gif" width="100"/><figcaption style="text-align:center"><i>-FFN</i></figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_nocrop_crop.gif" width="100"/><figcaption style="text-align:center"><i>-crop</i></figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_nogeo_crop.gif" width="100"/><figcaption style="text-align:center"><i>-displ</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablplane_crop.gif" width="100"/><figcaption style="text-align:center"><i>-3D</i></figcaption></figure>
 <p><em>Ablation on the priors used in our method (<i>full</i>) for a candle mesh and target ‘Candle made of bark’: w/o our style field network (<i>−net</i>), w/o 2D augmentations (<i>−aug</i>), w/o positional encoding (<i>−FFN</i>), w/o crop augmentations for ψlocal (<i>−crop</i>), w/o the geometry-only component of Lsim (<i>−displ</i>), and learning over a 2D plane in 3D space (<i>−3D</i>).</em></p>
 </center>
 
