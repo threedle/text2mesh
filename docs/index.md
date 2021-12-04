@@ -9,6 +9,10 @@ layout: default
 Text2Mesh produces color and geometric details over a variety of source meshes, driven by a target text prompt. Our stylization results coherently blend unique and ostensibly unrelated combinations of text, capturing both global semantics and part-aware attributes.
 </em></p>
 
+<a href="https://github.com/threedle/text2mesh" class="btn">Code</a>
+<a href="https://www.dropbox.com/s/hbzq7xp95tr1788/text2mesh-preprint.pdf?dl=0" class="btn">Paper</a>
+<a href="arxiv.com/supp" class="btn">Supplementary</a>
+
 </center>
 
 * * *
@@ -26,26 +30,50 @@ In this work, we develop intuitive controls for editing the style of 3D objects.
 ## View Consistency
 We use [CLIP's](https://openai.com/blog/clip/) ability to jointly embed text and images to produce view-consistent and semantically meaningful stylizations over the entire 3D shape.
 <center>
-<img src="figures/multiple-views/croissant_final_crop.gif" alt="croissant made of colorful crochet" width="500"/>
-<img src="figures/multiple-views/armadillo_final_crop.gif" alt="armadillo made of gold" width="500"/>
-<img src="figures/multiple-views/donkey_final_crop.gif" alt="donkey wearing jeans" width="500"/>
+<div class="carousel">
+    <div class="item">
+        <img src="figures/multiple-views/croissant_final_crop.gif" alt="croissant made of colorful crochet" width="500"/>
+        <p>a croissant made of colorful crochet</p>
+    </div>
+    <div class="item">
+        <img src="figures/multiple-views/armadillo_final_crop.gif" alt="armadillo made of gold" width="500"/>
+        <p>armadillo made of gold</p>
+    </div>
+    <div class="item">
+        <img src="figures/multiple-views/donkey_final_crop.gif" alt="donkey wearing jeans" width="500"/>
+        <p>donkey wearing jeans</p>
+    </div>
+</div>
 </center>
-
 ## General Stylization
 For the same input mesh, Text2Mesh is capable of generating a variety of different local geometric displacements to synthesize a wide range of styles.
 <center>
- <img src="figures/morphs/vase_init_crop.gif" alt="vase" width="400"/>
- <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400"/>
- <img src="figures/morphs/donut_init_crop.gif" alt="donut" width="400"/>
- <img src="figures/morphs/donut_full_crop.gif" alt="donut" width="400"/>
-<img src="figures/morphs/camel_init_crop.gif" alt="camel" width="400"/>
- <img src="figures/morphs/camel_full_crop.gif" alt="camel" width="400"/>
-<img src="figures/morphs/chair_init_crop.gif" alt="chair" width="400"/>
- <img src="figures/morphs/chair_full_crop.gif" alt="chair" width="400"/>
-<img src="figures/morphs/alien_init_crop.gif" alt="alien" width="400"/>
- <img src="figures/morphs/alien_full_crop.gif" alt="alien" width="400"/>
-<img src="figures/morphs/iron_init_crop.gif" alt="alien" width="400"/>
- <img src="figures/morphs/iron_full_crop.gif" alt="alien" width="400"/>
+<div class="double-carousel">
+    <div class="item">
+        <img src="figures/labeled_morphs/vase_init.gif" alt="vase" width="400"/>
+        <img src="figures/labeled_morphs/vase_full.gif" alt="vase" width="400"/>
+    </div>
+    <div class="item">
+        <img src="figures/morphs/vase_init_crop.gif" alt="vase" width="400"/>
+        <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400"/>
+    </div>
+    <div class="item">
+        <img src="figures/morphs/donut_init_crop.gif" alt="donut" width="400"/>
+        <img src="figures/morphs/donut_full_crop.gif" alt="donut" width="400"/>
+    </div>
+    <div class="item">
+        <img src="figures/morphs/camel_init_crop.gif" alt="camel" width="400"/>
+        <img src="figures/morphs/camel_full_crop.gif" alt="camel" width="400"/>
+    </div>
+    <div class="item">
+        <img src="figures/morphs/chair_init_crop.gif" alt="chair" width="400"/>
+        <img src="figures/morphs/chair_full_crop.gif" alt="chair" width="400"/>
+    </div>
+    <div class="item">
+        <img src="figures/morphs/alien_init_crop.gif" alt="alien" width="400"/>
+        <img src="figures/morphs/alien_full_crop.gif" alt="alien" width="400"/>
+    </div>
+ </div>
 </center>
 
 [comment]: <> (## Interplay of Geometry and Color)
@@ -63,16 +91,25 @@ We further leverage the joint vision-language embedding space to demonstrate the
 
 ### Target Image
 <center>
- <img src="figures/target-image/bucket_cobble.gif" alt="bucket" width="340"/>
-<br>
- <img src="figures/target-image/pig_fish.gif" alt="pig" width="500"/>
-<br>
- <img src="figures/target-image/iron_crochet.gif" alt="iron" width="450"/>
-</center>
-
-### Target Mesh
-<center>
- <img src="figures/target-mesh/armadillo_final.gif" alt="armadillo" width="400"/>
+<div class="carousel">
+    <div class="item">
+        <img src="figures/target-image/bucket_cobble.gif" alt="bucket" width="340"/>
+        <p>image target</p>
+    </div>
+    <div class="item">
+        <img src="figures/target-image/pig_fish.gif" alt="pig" width="500"/>
+        <p>image target</p>
+    </div>
+    <div class="item">
+        <img src="figures/target-image/iron_crochet.gif" alt="iron" width="450"/>
+        <p>image target</p>
+    </div>
+    <div class="item">
+        <img src="figures/target-mesh/armadillo_final.gif" alt="armadillo" width="400"/>
+        <p>mesh target</p>
+    </div>
+ 
+ </div>
 </center>
 
 ## Citation
