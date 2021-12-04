@@ -118,7 +118,7 @@ We further leverage the joint vision-language embedding space to demonstrate the
               and Benaim, Sagie
               and Hanocka, Rana
               },
-    title = {{Text2Mesh: Text-Driven Neural Stylization for Meshes}},
+    title = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
     journal = {TODO: ARXIV},
     year  = {2021}
 }
