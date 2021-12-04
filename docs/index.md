@@ -20,7 +20,7 @@ In this work, we develop intuitive controls for editing the style of 3D objects.
 ## Overview
 <center>
 <img src="figures/pipeline.jpg" alt="Pipeline" width="1000"/>
-<p><em>Text2Mesh modifies an input mesh to conform to the target text by predicting color and geometric details. The weights of the neural style network are optimized by rendering multiple 2D images and applying 2D augmentations, which are given a similarity score to the target from the CLIP-based semantic loss.</em></p>
+<p><em>Text2Mesh modifies an <span style="color: palegreen">input mesh</span> to conform to the <span style="color: palegreen">target text</span> by predicting color and geometric details. The weights of the <span style="color: sandybrown">neural style network</span> are optimized by <span style="color: royalblue">rendering</span> multiple 2D images and applying <span style="color: royalblue">2D augmentations</span>, which are given a similarity score to the target from the CLIP-based <span style="color: salmon">semantic loss</span>.</em></p>
 </center>
 
 ## View Consistency
@@ -34,8 +34,6 @@ We use [CLIP's](https://openai.com/blog/clip/) ability to jointly embed text and
 ## General Stylization
 For the same input mesh, Text2Mesh is capable of generating a variety of different local geometric displacements to synthesize a wide range of styles.
 <center>
- <img src="figures/labeled_morphs/vase_init.gif" alt="vase" width="400"/>
- <img src="figures/labeled_morphs/vase_full.gif" alt="vase" width="400"/>
  <img src="figures/morphs/vase_init_crop.gif" alt="vase" width="400"/>
  <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400"/>
  <img src="figures/morphs/donut_init_crop.gif" alt="donut" width="400"/>
@@ -46,6 +44,8 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
  <img src="figures/morphs/chair_full_crop.gif" alt="chair" width="400"/>
 <img src="figures/morphs/alien_init_crop.gif" alt="alien" width="400"/>
  <img src="figures/morphs/alien_full_crop.gif" alt="alien" width="400"/>
+<img src="figures/morphs/iron_init_crop.gif" alt="alien" width="400"/>
+ <img src="figures/morphs/iron_full_crop.gif" alt="alien" width="400"/>
 </center>
 
 [comment]: <> (## Interplay of Geometry and Color)
