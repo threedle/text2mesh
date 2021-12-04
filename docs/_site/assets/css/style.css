@@ -321,3 +321,19 @@ a:hover { text-decoration: underline; }
 .site-footer-owner { display: block; font-weight: bold; }
 
 .site-footer-credits { color: #819198; }
+
+.page-header { padding-bottom: 0rem; color: #159957; background-color: #fff; background-image: none; }
+.page-header .project-tagline { color: black; }
+.page-header .project-thanks { color: #464646; }
+.page-header .project-affiliation { color: #464646; }
+
+.btn { color: black; border-color: black; }
+
+.btn:hover { color: black; background-color: rgba(200, 197, 197, 0.2); border-color: black; }
+
+.main-content { padding-top: 0rem; }
+
+.carousel { display: flex; }
+
+.double-carousel { display: flex; flex-wrap: wrap; }
+.double-carousel .item { display: flex; }

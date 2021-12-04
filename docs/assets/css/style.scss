@@ -1,0 +1,49 @@
+---
+---
+
+@import 'jekyll-theme-cayman';
+
+.page-header {
+    padding-bottom: 0rem;
+    // color: #464646;
+    color: #159957;
+    background-color: #fff;
+    background-image: none;
+
+    .project-tagline {
+        color: black;
+    }
+    .project-thanks {
+        color: #464646;
+    }
+    .project-affiliation {
+        color: #464646;
+    }
+}
+
+.btn {
+    color: black;
+    border-color: black;
+}
+.btn:hover {
+    color: black;
+    background-color: rgba(200, 197, 197, 0.2);
+    border-color: black;
+}
+
+.main-content {
+    padding-top: 0rem;
+}
+
+.carousel {
+    display: flex;
+}
+
+.double-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+        display: flex
+    }
+}
+
