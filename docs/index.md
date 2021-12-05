@@ -51,23 +51,23 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 <center>
 <div class="double-carousel">
     <div class="item">
-        <img src="figures/morphs/vase_init_crop.gif" alt="vase" width="400"/>
+        <img src="figures/morphs/vase_init_inset.gif" alt="vase" width="400"/>
         <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400"/>
     </div>
     <div class="item">
-        <img src="figures/morphs/donut_init_crop.gif" alt="donut" width="400"/>
+        <img src="figures/morphs/donut_init_inset.gif" alt="donut" width="400"/>
         <img src="figures/morphs/donut_full_crop.gif" alt="donut" width="400"/>
     </div>
     <div class="item">
-        <img src="figures/morphs/camel_init_crop.gif" alt="camel" width="400"/>
+        <img src="figures/morphs/camel_init_inset.gif" alt="camel" width="400"/>
         <img src="figures/morphs/camel_full_crop.gif" alt="camel" width="400"/>
     </div>
     <div class="item">
-        <img src="figures/morphs/chair_init_crop.gif" alt="chair" width="400"/>
+        <img src="figures/morphs/chair_init_inset.gif" alt="chair" width="400"/>
         <img src="figures/morphs/chair_full_crop.gif" alt="chair" width="400"/>
     </div>
     <div class="item">
-        <img src="figures/morphs/alien_init_crop.gif" alt="alien" width="400"/>
+        <img src="figures/morphs/alien_init_inset.gif" alt="alien" width="400"/>
         <img src="figures/morphs/alien_full_crop.gif" alt="alien" width="400"/>
     </div>
  </div>
