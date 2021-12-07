@@ -131,7 +131,7 @@ We further leverage the joint vision-language embedding space to demonstrate the
               and Hanocka, Rana
               },
     title = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
-    journal = {TODO: ARXIV},
+    journal = {arXiv preprint arXiv:2112.03221},
     year  = {2021}
 }
 ```
