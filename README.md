@@ -12,13 +12,13 @@
 conda env create --file text2mesh.yml
 conda activate text2mesh
 ```
-<details>
-<summary>System requirements <em>[click to expand]</em> </summary>
+
+System requirements
 ### System Requirements
 - Python 3.7
 - CUDA 10.2
 - GPU w/ minimum 8 GB ram
-</details>
+
 
 ### Run examples
 Call the below shell scripts to generate example styles. 
