@@ -12,7 +12,7 @@ Text2Mesh produces color and geometric details over a variety of source meshes, 
 </em></p>
 
 <a href="https://github.com/threedle/text2mesh" class="btn">Code</a>
-<a href="https://www.dropbox.com/s/hbzq7xp95tr1788/text2mesh-preprint.pdf?dl=0" class="btn">Paper</a>
+<a href="https://arxiv.org/abs/2112.03221" class="btn">Paper</a>
 <a href="arxiv.com/supp" class="btn">Supplementary</a>
 
 </center>
