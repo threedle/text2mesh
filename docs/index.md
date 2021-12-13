@@ -87,6 +87,23 @@ We show the distinct effect of each of our design choices on the quality of the 
 <p><em>Ablation on the priors used in our method (<i>full</i>) for a candle mesh and target ‘Candle made of bark’: w/o our style field network (<i>−net</i>), w/o 2D augmentations (<i>−aug</i>), w/o positional encoding (<i>−FFN</i>), w/o crop augmentations for ψlocal (<i>−crop</i>), w/o the geometry-only component of Lsim (<i>−displ</i>), and learning over a 2D plane in 3D space (<i>−3D</i>).</em></p>
 </center>
 
+## Text Specificity
+We are able to synthesize styles of increasing specificity while retaining the details from the previous levels. 
+<center>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/iron_base_crop.gif" width="100"/><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/iron_1_crop.gif" width="150"/><figcaption style="text-align:center">Clothes iron</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_2_crop.gif" width="150"/><figcaption style="text-align:center">Clothes iron<br>made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_3_crop.gif" width="150"/><figcaption style="text-align:center">Golden clothes iron<br>made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_4_crop.gif" width="150"/><br style="text-align:center"><figcaption style="text-align:center">Shiny golden clothes<br>iron made of crochet</figcaption></figure>
+</center>
+<center>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_base_crop.gif" width="100"/><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_1_crop.gif" width="150"/><figcaption style="text-align:center">Lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_2_crop.gif" width="150"/><figcaption style="text-align:center">Luxo lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_3_crop.gif" width="150"/><figcaption style="text-align:center">Blue steel luxo lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/lamp_4_crop.gif" width="150"/><br style="text-align:center"><figcaption style="text-align:center">Blue steel luxo lamp<br>with corrugated metal</figcaption></figure>
+</center>
+
 [comment]: <> (## Interplay of Geometry and Color)
 
 [comment]: <> (We observe a strong correlation between the displacements and the coloring that _NSF_ produces, which results in a consistent stylized 3D mesh.)

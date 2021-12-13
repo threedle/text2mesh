@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=2c19db78e96b6240227ebdcafe2df0f766e538f4">
+    <link rel="stylesheet" href="/assets/css/style.css?v=f4792bbea86bfd5f1029ddb5afca8394621206c0">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -60,7 +60,7 @@ Text2Mesh produces color and geometric details over a variety of source meshes, 
 </em></p>
 
 <a href="https://github.com/threedle/text2mesh" class="btn">Code</a>
-<a href="https://www.dropbox.com/s/hbzq7xp95tr1788/text2mesh-preprint.pdf?dl=0" class="btn">Paper</a>
+<a href="https://arxiv.org/abs/2112.03221" class="btn">Paper</a>
 <a href="arxiv.com/supp" class="btn">Supplementary</a>
 
 </center>
@@ -135,6 +135,23 @@ Text2Mesh produces color and geometric details over a variety of source meshes, 
 <p><em>Ablation on the priors used in our method (<i>full</i>) for a candle mesh and target ‘Candle made of bark’: w/o our style field network (<i>−net</i>), w/o 2D augmentations (<i>−aug</i>), w/o positional encoding (<i>−FFN</i>), w/o crop augmentations for ψlocal (<i>−crop</i>), w/o the geometry-only component of Lsim (<i>−displ</i>), and learning over a 2D plane in 3D space (<i>−3D</i>).</em></p>
 </center>
 
+<h2 id="text-specificity">Text Specificity</h2>
+<p>We are able to synthesize styles of increasing specificity while retaining the details from the previous levels.</p>
+<center>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/iron_base_crop.gif" width="100" /><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/iron_1_crop.gif" width="150" /><figcaption style="text-align:center">Clothes iron</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_2_crop.gif" width="150" /><figcaption style="text-align:center">Clothes iron<br />made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_3_crop.gif" width="150" /><figcaption style="text-align:center">Golden clothes iron<br />made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_4_crop.gif" width="150" /><br style="text-align:center" /><figcaption style="text-align:center">Shiny golden clothes<br />iron made of crochet</figcaption></figure>
+</center>
+<center>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_base_crop.gif" width="100" /><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_1_crop.gif" width="150" /><figcaption style="text-align:center">Lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_2_crop.gif" width="150" /><figcaption style="text-align:center">Luxo lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_3_crop.gif" width="150" /><figcaption style="text-align:center">Blue steel luxo lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/lamp_4_crop.gif" width="150" /><br style="text-align:center" /><figcaption style="text-align:center">Blue steel luxo lamp<br />with corrugated metal</figcaption></figure>
+</center>
+
 <h2 id="beyond-text-driven-manipulation">Beyond Text-Driven Manipulation</h2>
 <p>We further leverage the joint vision-language embedding space to demonstrate the multi-modal stylization capabilities of our method.</p>
 
@@ -168,7 +185,7 @@ Text2Mesh produces color and geometric details over a variety of source meshes, 
               and Hanocka, Rana
               },
     title = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
-    journal = {TODO: ARXIV},
+    journal = {arXiv preprint arXiv:2112.03221},
     year  = {2021}
 }
 </code></pre></div></div>
