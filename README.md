@@ -82,6 +82,10 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 <img alt="horse style" height="135" src="images/horse_final.png" width="240"/>
 </p>
 
+## Other implementations
+[Kaggle Notebook](https://www.kaggle.com/neverix/text2mesh/) (by [neverix](https://www.kaggle.com/neverix))
+
+
 ## Citation
 ```
 @article{text2mesh,
