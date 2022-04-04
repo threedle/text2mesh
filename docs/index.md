@@ -3,10 +3,15 @@ layout: default
 ---
 
 <center>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/ironman_inset.gif" alt="ironman" width="150"/><figcaption style="text-align:center">Iron Man</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/candle_inset.gif" alt="a candle made of colorful crochet" width="150"/><figcaption style="text-align:center">Colorful Crochet Candle</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/lamp_inset.gif" alt="a lamp made of brick" width="250"/><figcaption style="text-align:center">Brick Lamp</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/horse_inset.gif" alt="a horse wearing an astronaut suit" width="200"/><figcaption style="text-align:center">Astronaut Horse</figcaption></figure>
+<!-- <figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/ironman_inset.mp4" alt="ironman" width="150"/><figcaption style="text-align:center">Iron Man</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/candle_inset.mp4" alt="a candle made of colorful crochet" width="150"/><figcaption style="text-align:center">Colorful Crochet Candle</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/lamp_inset.mp4" alt="a lamp made of brick" width="250"/><figcaption style="text-align:center">Brick Lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/horse_inset.mp4" alt="a horse wearing an astronaut suit" width="200"/><figcaption style="text-align:center">Astronaut Horse</figcaption></figure> -->
+<figure style="display:inline-block;margin:0;padding:0"><video id='t1' width="150" controls='controls'><source src="figures/teaser/ironman_inset.mp4" alt="ironman"/></video><figcaption style="text-align:center">Iron Man</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video id='t2' width="150" controls='controls'><source src="figures/teaser/candle_inset.mp4" alt="a candle made of colorful crochet"/></video><figcaption style="text-align:center">Colorful Crochet Candle</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video id='t3' width="250" controls='controls'><source src="figures/teaser/lamp_inset.mp4" alt="a lamp made of brick"/></video><figcaption style="text-align:center">Brick Lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video id='t4' width="200" controls='controls'><source src="figures/teaser/horse_inset.mp4" alt="a horse wearing an astronaut suit"/></video><figcaption style="text-align:center">Astronaut Horse</figcaption></figure>
+
 <p><em>
 Text2Mesh produces color and geometric details over a variety of source meshes, driven by a target text prompt. Our stylization results coherently blend unique and ostensibly unrelated combinations of text, capturing both global semantics and part-aware attributes.
 </em></p>
@@ -33,15 +38,15 @@ In this work, we develop intuitive controls for editing the style of 3D objects.
 We use [CLIP's](https://openai.com/blog/clip/) ability to jointly embed text and images to produce view-consistent and semantically meaningful stylizations over the entire 3D shape.
 <center>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/multiple-views/croissant_final_crop.gif" alt="croissant made of colorful crochet" width="250"/>
+    <video width='250' controls='controls'><source src="figures/multiple-views/croissant_final_crop.mp4" alt="croissant made of colorful crochet"/></video>
     <figcaption style="text-align:center">croissant made of colorful crochet</figcaption>
 </figure>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/multiple-views/armadillo_final_crop.gif" alt="armadillo made of gold" width="250"/>
+    <video width='250' controls='controls'><source src="figures/multiple-views/armadillo_final_crop.mp4" alt="armadillo made of gold"/></video>
     <figcaption style="text-align:center">armadillo made of gold</figcaption>
 </figure>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/multiple-views/donkey_final_crop.gif" alt="donkey wearing jeans" width="250"/>
+    <video width='250' controls='controls'><source src="figures/multiple-views/donkey_final_crop.mp4" alt="donkey wearing jeans"/></video>
     <figcaption style="text-align:center">donkey wearing jeans</figcaption>
 </figure>
 </center>
@@ -51,24 +56,24 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 <center>
 <div class="double-carousel">
     <div class="item">
-        <img src="figures/morphs/vase_init_inset.gif" alt="vase" width="400"/>
-        <img src="figures/morphs/vase_full_crop.gif" alt="vase" width="400"/>
+        <video width='400' controls='controls'><source src="figures/morphs/vase_init_inset.mp4" alt="vase"/></video>
+        <video width='400' controls='controls'><source src="figures/morphs/vase_full_crop.mp4" alt="vase"/></video>
     </div>
     <div class="item">
-        <img src="figures/morphs/donut_init_inset.gif" alt="donut" width="400"/>
-        <img src="figures/morphs/donut_full_crop.gif" alt="donut" width="400"/>
+        <video width='400' controls='controls'><source src="figures/morphs/donut_init_inset.mp4" alt="donut"/></video>
+        <video width='400' controls='controls'><source src="figures/morphs/donut_full_crop.mp4" alt="donut"/></video>
     </div>
     <div class="item">
-        <img src="figures/morphs/camel_init_inset.gif" alt="camel" width="400"/>
-        <img src="figures/morphs/camel_full_crop.gif" alt="camel" width="400"/>
+        <video width='400' controls='controls'><source src="figures/morphs/camel_init_inset.mp4" alt="camel"/></video>
+        <video width='400' controls='controls'><source src="figures/morphs/camel_full_crop.mp4" alt="camel"/></video>
     </div>
     <div class="item">
-        <img src="figures/morphs/chair_init_inset.gif" alt="chair" width="400"/>
-        <img src="figures/morphs/chair_full_crop.gif" alt="chair" width="400"/>
+        <video width='400' controls='controls'><source src="figures/morphs/chair_init_inset.mp4" alt="chair"/></video>
+        <video width='400' controls='controls'><source src="figures/morphs/chair_full_crop.mp4" alt="chair"/></video>
     </div>
     <div class="item">
-        <img src="figures/morphs/alien_init_inset.gif" alt="alien" width="400"/>
-        <img src="figures/morphs/alien_full_crop.gif" alt="alien" width="400"/>
+        <video width='400' controls='controls'><source src="figures/morphs/alien_init_inset.mp4" alt="alien"/></video>
+        <video width='400' controls='controls'><source src="figures/morphs/alien_full_crop.mp4" alt="alien"/></video>
     </div>
  </div>
 </center>
@@ -76,32 +81,32 @@ For the same input mesh, Text2Mesh is capable of generating a variety of differe
 ## Ablations
 We show the distinct effect of each of our design choices on the quality of the final stylization through a series of ablations.
 <center>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_base_crop.gif" width="90"/><figcaption style="text-align:center">source</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_full_crop.gif" width="100"/><figcaption style="text-align:center"><i>full</i></figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablnetwork_crop.gif" width="100"/><figcaption style="text-align:center"><i>-net</i></figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablaug_crop.gif" width="100"/><figcaption style="text-align:center"><i>-aug</i></figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablffn_crop.gif" width="100"/><figcaption style="text-align:center"><i>-FFN</i></figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_nocrop_crop.gif" width="100"/><figcaption style="text-align:center"><i>-crop</i></figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_nogeo_crop.gif" width="100"/><figcaption style="text-align:center"><i>-displ</i></figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/ablation/candle_ablplane_crop.gif" width="100"/><figcaption style="text-align:center"><i>-3D</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_base_crop.mp4" width="90"/></video><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_full_crop.mp4" /></video><figcaption style="text-align:center"><i>full</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_ablnetwork_crop.mp4" /></video><figcaption style="text-align:center"><i>-net</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_ablaug_crop.mp4" /></video><figcaption style="text-align:center"><i>-aug</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_ablffn_crop.mp4" /></video><figcaption style="text-align:center"><i>-FFN</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_nocrop_crop.mp4" /></video><figcaption style="text-align:center"><i>-crop</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_nogeo_crop.mp4" /></video><figcaption style="text-align:center"><i>-displ</i></figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/ablation/candle_ablplane_crop.mp4" /></video><figcaption style="text-align:center"><i>-3D</i></figcaption></figure>
 <p><em>Ablation on the priors used in our method (<i>full</i>) for a candle mesh and target ‘Candle made of bark’: w/o our style field network (<i>−net</i>), w/o 2D augmentations (<i>−aug</i>), w/o positional encoding (<i>−FFN</i>), w/o crop augmentations for ψlocal (<i>−crop</i>), w/o the geometry-only component of Lsim (<i>−displ</i>), and learning over a 2D plane in 3D space (<i>−3D</i>).</em></p>
 </center>
 
 ## Text Specificity
 We are able to synthesize styles of increasing specificity while retaining the details from the previous levels. 
 <center>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/iron_base_crop.gif" width="100"/><figcaption style="text-align:center">source</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/iron_1_crop.gif" width="150"/><figcaption style="text-align:center">Clothes iron</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_2_crop.gif" width="150"/><figcaption style="text-align:center">Clothes iron<br>made of crochet</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_3_crop.gif" width="150"/><figcaption style="text-align:center">Golden clothes iron<br>made of crochet</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/iron_4_crop.gif" width="150"/><br style="text-align:center"><figcaption style="text-align:center">Shiny golden clothes<br>iron made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/text-specificity/iron_base_crop.mp4"/></video><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/text-specificity/iron_1_crop.mp4"/></video><figcaption style="text-align:center">Clothes iron</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><video width='150' controls='controls'><source src="figures/text-specificity/iron_2_crop.mp4"/></video><figcaption style="text-align:center">Clothes iron<br>made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><video width='150' controls='controls'><source src="figures/text-specificity/iron_3_crop.mp4"/></video><figcaption style="text-align:center">Golden clothes iron<br>made of crochet</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><video width='150' controls='controls'><source src="figures/text-specificity/iron_4_crop.mp4"/></video><br style="text-align:center"><figcaption style="text-align:center">Shiny golden clothes<br>iron made of crochet</figcaption></figure>
 </center>
 <center>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_base_crop.gif" width="100"/><figcaption style="text-align:center">source</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_1_crop.gif" width="150"/><figcaption style="text-align:center">Lamp</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_2_crop.gif" width="150"/><figcaption style="text-align:center">Luxo lamp</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/text-specificity/lamp_3_crop.gif" width="150"/><figcaption style="text-align:center">Blue steel luxo lamp</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><img src="figures/text-specificity/lamp_4_crop.gif" width="150"/><br style="text-align:center"><figcaption style="text-align:center">Blue steel luxo lamp<br>with corrugated metal</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/text-specificity/lamp_base_crop.mp4"/></video><figcaption style="text-align:center">source</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/text-specificity/lamp_1_crop.mp4"/></video><figcaption style="text-align:center">Lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/text-specificity/lamp_2_crop.mp4"/></video><figcaption style="text-align:center">Luxo lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video width='150' controls='controls'><source src="figures/text-specificity/lamp_3_crop.mp4"/></video><figcaption style="text-align:center">Blue steel luxo lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0;vertical-align:top"><video width='150' controls='controls'><source src="figures/text-specificity/lamp_4_crop.mp4"/></video><br style="text-align:center"><figcaption style="text-align:center">Blue steel luxo lamp<br>with corrugated metal</figcaption></figure>
 </center>
 
 [comment]: <> (## Interplay of Geometry and Color)
@@ -110,7 +115,7 @@ We are able to synthesize styles of increasing specificity while retaining the d
 
 [comment]: <> (<center>)
 
-[comment]: <> ( <img src="figures/coupling/donut.gif" alt="a donut with sprinkles" width="600"/>)
+[comment]: <> ( <video width='100' controls='controls'><source src="figures/coupling/donut.mp4" alt="a donut with sprinkles" width="600"/>)
 
 [comment]: <> (</center>)
 
@@ -120,19 +125,19 @@ We further leverage the joint vision-language embedding space to demonstrate the
 ### Image and Mesh Targets
 <center>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/target-image/bucket_cobble.gif" alt="bucket" width="150"/>
+    <video width='150' controls='controls'><source src="figures/target-image/bucket_cobble.mp4" alt="bucket"/></video>
     <figcaption style="text-align:center">image target</figcaption>
 </figure>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/target-image/pig_fish.gif" alt="pig" width="220"/>
+    <video width='220' controls='controls'><source src="figures/target-image/pig_fish.mp4" alt="pig"/></video>
     <figcaption style="text-align:center">image target</figcaption>
 </figure>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/target-image/iron_crochet.gif" alt="iron" width="200"/>
+    <video width='200' controls='controls'><source src="figures/target-image/iron_crochet.mp4" alt="iron"/></video>
     <figcaption style="text-align:center">image target</figcaption>
 </figure>
 <figure style="display:inline-block;margin:0;padding:0">
-    <img src="figures/target-mesh/armadillo_final.gif" alt="armadillo" width="220"/>
+    <video width='220' controls='controls'><source src="figures/target-mesh/armadillo_final.mp4" alt="armadillo"/></video>
     <figcaption>mesh target</figcaption>
 </figure>
 </center>
