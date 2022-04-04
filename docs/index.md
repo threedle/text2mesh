@@ -3,14 +3,14 @@ layout: default
 ---
 
 <center>
-<!-- <figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/ironman_inset.mp4" alt="ironman" width="150"/><figcaption style="text-align:center">Iron Man</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/candle_inset.mp4" alt="a candle made of colorful crochet" width="150"/><figcaption style="text-align:center">Colorful Crochet Candle</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/lamp_inset.mp4" alt="a lamp made of brick" width="250"/><figcaption style="text-align:center">Brick Lamp</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/horse_inset.mp4" alt="a horse wearing an astronaut suit" width="200"/><figcaption style="text-align:center">Astronaut Horse</figcaption></figure> -->
-<figure style="display:inline-block;margin:0;padding:0"><video id='t1' width="150" controls='controls'><source src="figures/teaser/ironman_inset.mp4" alt="ironman"/></video><figcaption style="text-align:center">Iron Man</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/ironman_inset.gif" alt="ironman" width="150"/><figcaption style="text-align:center">Iron Man</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/candle_inset.gif" alt="a candle made of colorful crochet" width="150"/><figcaption style="text-align:center">Colorful Crochet Candle</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/lamp_inset.gif" alt="a lamp made of brick" width="250"/><figcaption style="text-align:center">Brick Lamp</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><img src="figures/teaser/horse_inset.gif" alt="a horse wearing an astronaut suit" width="200"/><figcaption style="text-align:center">Astronaut Horse</figcaption></figure>
+<!-- <figure style="display:inline-block;margin:0;padding:0"><video id='t1' width="150" controls='controls'><source src="figures/teaser/ironman_inset.mp4" alt="ironman"/></video><figcaption style="text-align:center">Iron Man</figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><video id='t2' width="150" controls='controls'><source src="figures/teaser/candle_inset.mp4" alt="a candle made of colorful crochet"/></video><figcaption style="text-align:center">Colorful Crochet Candle</figcaption></figure>
 <figure style="display:inline-block;margin:0;padding:0"><video id='t3' width="250" controls='controls'><source src="figures/teaser/lamp_inset.mp4" alt="a lamp made of brick"/></video><figcaption style="text-align:center">Brick Lamp</figcaption></figure>
-<figure style="display:inline-block;margin:0;padding:0"><video id='t4' width="200" controls='controls'><source src="figures/teaser/horse_inset.mp4" alt="a horse wearing an astronaut suit"/></video><figcaption style="text-align:center">Astronaut Horse</figcaption></figure>
+<figure style="display:inline-block;margin:0;padding:0"><video id='t4' width="200" controls='controls'><source src="figures/teaser/horse_inset.mp4" alt="a horse wearing an astronaut suit"/></video><figcaption style="text-align:center">Astronaut Horse</figcaption></figure> -->
 
 <p><em>
 Text2Mesh produces color and geometric details over a variety of source meshes, driven by a target text prompt. Our stylization results coherently blend unique and ostensibly unrelated combinations of text, capturing both global semantics and part-aware attributes.
