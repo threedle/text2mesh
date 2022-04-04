@@ -398,6 +398,72 @@ def save_rendered_results(args, dir, final_color, mesh):
     img = torch.cat((img, alpha.unsqueeze(0)), dim=0)
     img = transforms.ToPILImage()(img)
     img.save(os.path.join(dir, f"final_cluster.png"))
+    
+    # TODO: generate gif by rotating around y-axis 
+    # Sweep 2 sec view around azimuth
+    interval = 50  # 30 FPS = 33 ms delay for each frame; half second for each sweep direction
+    views = [(center[0] - 2 * np.pi * i/interval,
+                center[1]) for i in
+                range(interval)]
+    views = torch.tensor(views).to(device)
+
+    # Vertex colorings
+    mesh.face_attributes = kaolin.ops.mesh.index_vertices_by_faces(vcolors.unsqueeze(0), mesh.faces)
+    imgs, masks = kal_render.render_set_views(mesh, angles=views, radius=radius,
+                                                background=torch.tensor([1, 1, 1]).to(device).float(),
+                                                return_mask=True)
+
+    pil_imgs = []
+    pil_init_imgs = []
+    pil_base_imgs = []
+    for i in range(len(imgs)):
+        # Styled frame
+        img = imgs[i].cpu()
+        mask = masks[i].cpu()
+        # Manually add alpha channel using background color
+        alpha = torch.ones(img.shape[1], img.shape[2])
+        alpha[torch.where(mask == 0)] = 0
+        img = torch.cat((img, alpha.unsqueeze(0)), dim=0)
+
+        img = transforms.ToPILImage()(img)
+        pil_imgs.append(img)
+        img.save(os.path.join(datapath, f"y_frame{i}.png"))
+
+        # Init frame
+        img = init_imgs[i].cpu()
+        mask = init_masks[i].cpu()
+        alpha = torch.ones(img.shape[1], img.shape[2])
+        alpha[torch.where(mask == 0)] = 0
+        img = torch.cat((img, alpha.unsqueeze(0)), dim=0)
+
+        img = transforms.ToPILImage()(img)
+        pil_init_imgs.append(img)
+        img.save(os.path.join(datapath, f"y_init_frame{i}.png"))
+
+        # Init frame
+        img = base_imgs[i].cpu()
+        mask = base_masks[i].cpu()
+        alpha = torch.ones(img.shape[1], img.shape[2])
+        alpha[torch.where(mask == 0)] = 0
+        img = torch.cat((img, alpha.unsqueeze(0)), dim=0)
+
+        img = transforms.ToPILImage()(img)
+        pil_base_imgs.append(img)
+        img.save(os.path.join(datapath, f"y_base_frame{i}.png"))
+
+    # Composite GIFs
+    # NOTE: THIS HAS NO SHADOWS
+    pil_imgs[0].save(fp=os.path.join(datapath, f"y_{config}.gif"), format='GIF',
+                        append_images=pil_imgs[1:],
+                        save_all=True, duration=33, loop=0)
+
+    pil_init_imgs[0].save(fp=os.path.join(datapath, f"y_{config}_init.gif"), format='GIF',
+                            append_images=pil_init_imgs[1:],
+                            save_all=True, duration=33, loop=0)
+
+    pil_base_imgs[0].save(fp=os.path.join(datapath, f"y_{config}_base.gif"), format='GIF',
+                            append_images=pil_base_imgs[1:],
+                            save_all=True, duration=33, loop=0)
 
 
 def update_mesh(mlp, network_input, prior_color, sampled_mesh, vertices):
