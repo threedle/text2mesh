@@ -13,11 +13,30 @@ conda env create --file text2mesh.yml
 conda activate text2mesh
 ```
 
-System requirements
 ### System Requirements
 - Python 3.7
 - CUDA 10.2
 - GPU w/ minimum 8 GB ram
+
+### Remeshing
+Since Text2Mesh displaces and colors each vertex, if ran on a mesh with large triangles the results won't look as clean. For example, the triangles on the seat of the mesh below are too large.
+
+
+<p style="text-align:center">
+<img alt="large-triangles" src="images/large-triangles.png" height="25%" width="25%" />
+</p>
+
+Therefore, if the input mesh has large triangles, make sure to run the following command, and then pass in the resulting object to Text2Mesh.
+
+```
+python3 remesh.py --obj_path [the mesh's path] --output_path [the full output path]
+```
+
+For example, to remesh a file name called `chair.obj`, the following command should be run.  
+
+```
+python3 remesh.py --obj_path chair.obj --output_path chair-remesh.obj
+```
 
 
 ### Run examples
