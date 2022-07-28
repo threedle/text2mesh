@@ -19,7 +19,7 @@ conda activate text2mesh
 - GPU w/ minimum 8 GB ram
 
 ### Remeshing
-Since Text2Mesh displaces and colors each vertex, if ran on a mesh with large triangles the results won't look as clean. For example, the triangles on the seat of the chair below are too large.
+Since vertices will represent the color and displacement, if ran on a mesh with large triangles the results won't look as clean. For example, the triangles on the seat of the chair below are too large.
 
 
 <p align="center">
