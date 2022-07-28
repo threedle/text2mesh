@@ -22,7 +22,7 @@ conda activate text2mesh
 Since Text2Mesh displaces and colors each vertex, if ran on a mesh with large triangles the results won't look as clean. For example, the triangles on the seat of the mesh below are too large.
 
 
-<p style="text-align:center">
+<p float="center">
 <img alt="large-triangles" src="images/large-triangles.png" height="25%" width="25%" />
 </p>
 
