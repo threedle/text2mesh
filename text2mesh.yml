@@ -1,4 +1,4 @@
-name: temp 
+name: text2mesh 
 channels:
   - pytorch
   - conda-forge
