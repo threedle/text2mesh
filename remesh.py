@@ -11,13 +11,6 @@ args = parser.parse_args()
 ms = pymeshlab.MeshSet()
 
 ms.load_new_mesh(args.obj_path)
-
-ms.remeshing_isotropic_explicit_remeshing()
+ms.meshing_isotropic_explicit_remeshing()
 
 ms.save_current_mesh(args.output_path)
-
-
-
-
-
-
