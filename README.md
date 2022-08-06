@@ -18,27 +18,6 @@ conda activate text2mesh
 - CUDA 10.2
 - GPU w/ minimum 8 GB ram
 
-### Remeshing
-Since vertices will represent the color and displacement, if ran on a mesh with large triangles the results won't look as clean. For example, the triangles on the seat of the chair below are too large.
-
-
-<p align="center">
-<img alt="large-triangles" src="images/large-triangles.png" height="25%" width="25%" />
-</p>
-
-Therefore, if the input mesh has large triangles, make sure to run the following command, and then pass in the resulting object to Text2Mesh.
-
-```
-python3 remesh.py --obj_path [the mesh's path] --output_path [the full output path]
-```
-
-For example, to remesh a file name called `chair.obj`, the following command should be run.  
-
-```
-python3 remesh.py --obj_path chair.obj --output_path chair-remesh.obj
-```
-
-
 ### Run examples
 Call the below shell scripts to generate example styles. 
 ```bash
@@ -100,6 +79,26 @@ The outputs will be saved to `results/demo`, with the stylized .obj files, color
 <img alt="horse geometry" height="135" src="images/horse_init.png" width="240"/>
 <img alt="horse style" height="135" src="images/horse_final.png" width="240"/>
 </p>
+
+## Important tips for running on your own meshes
+Text2Mesh learns to produce color and displacements over the input mesh vertices. The mesh triangulation effectively defines the resolution for the stylization. Therefore, it is important that the mesh triangles are small enough such that they can accurately potray the color and displacement. If a mesh contains large triangles, the stylization will not contain sufficent resolution (and leads to low quality results). For example, the triangles on the seat of the chair below are too large.
+
+<p align="center">
+<img alt="large-triangles" src="images/large-triangles.png" height="25%" width="25%" />
+</p>
+
+You should remesh such shapes as a pre-process in to create smaller triangles which are uniformly dispersed over the surface. Our example remeshing script can be used with the following command (and then use the remeshed shape with Text2Mesh):
+
+```
+python3 remesh.py --obj_path [the mesh's path] --output_path [the full output path]
+```
+
+For example, to remesh a file name called `chair.obj`, the following command should be run:  
+
+```
+python3 remesh.py --obj_path chair.obj --output_path chair-remesh.obj
+```
+
 
 ## Other implementations
 [Kaggle Notebook](https://www.kaggle.com/neverix/text2mesh/) (by [neverix](https://www.kaggle.com/neverix))
