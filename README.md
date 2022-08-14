@@ -103,6 +103,10 @@ python3 remesh.py --obj_path chair.obj --output_path chair-remesh.obj
 ## Other implementations
 [Kaggle Notebook](https://www.kaggle.com/neverix/text2mesh/) (by [neverix](https://www.kaggle.com/neverix))
 
+## External projects using Text2Mesh
+- [Endava 3D Asset Tool](https://www.endava.com/en/blog/Engineering/2022/An-R-D-Project-on-AI-in-3D-Asset-Creation-for-Games) integrates Text2Mesh into their modeling software to create 3D assets for games.
+
+- [Psychedelic Trips Art Gallery](https://www.flickr.com/photos/mcanet/sets/72177720299890759/) uses Text2Mesh to generate AI Art and fabricate (3D print) the results.
 
 ## Citation
 ```
