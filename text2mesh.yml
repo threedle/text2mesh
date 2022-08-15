@@ -4,19 +4,14 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.7
-  - torchaudio=0.9.0
-  - pytorch=1.9.0
-  - torchvision=0.10.0
-  - cudatoolkit=10.2.89
-  - trimesh=3.9.33
-  - matplotlib=3.4.2
-  - pip=21.0.1
-  - jupyter
+  - python=3.9
+  - pytorch=1.12.1
+  - torchvision=0.13.1
+  - torchaudio=0.12.1
+  - cudatoolkit=11.3
+  - matplotlib=3.5.2
+  - jupyter=1.0.0
+  - pip=21.1.2
   - pip:
-    - einops==0.3.2
-    - scipy==1.5.2
-    - siren-pytorch==0.1.5
-    - usd-core==21.8
-    - git+https://github.com/openai/CLIP.git@04f4dc2ca1ed0acc9893bd1a3b526a7e02c4bb10
-    - git+https://github.com/NVIDIAGameWorks/kaolin@838d982cb0765de75d3c5de15083d80b849fa737
+    - git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1
+    - git+https://github.com/NVIDIAGameWorks/kaolin@a00029e5e093b5a7fe7d3a10bf695c0f01e3bd98
