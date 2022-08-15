@@ -36,7 +36,7 @@ class Renderer():
         if background is not None:
             face_attributes = [
                 mesh.face_attributes,
-                torch.ones((1, n_faces, 3, 1), device='cuda')
+                torch.ones((1, n_faces, 3, 1), device=device)
             ]
         else:
             face_attributes = mesh.face_attributes
@@ -102,7 +102,7 @@ class Renderer():
         if background is not None:
             face_attributes = [
                 mesh.face_attributes,
-                torch.ones((1, n_faces, 3, 1), device='cuda')
+                torch.ones((1, n_faces, 3, 1), device=device)
             ]
         else:
             face_attributes = mesh.face_attributes
@@ -170,7 +170,7 @@ class Renderer():
         if background is not None:
             face_attributes = [
                 mesh.face_attributes,
-                torch.ones((1, n_faces, 3, 1), device='cuda')
+                torch.ones((1, n_faces, 3, 1), device=device)
             ]
         else:
             face_attributes = mesh.face_attributes
@@ -250,7 +250,7 @@ class Renderer():
         if background is not None:
             face_attributes = [
                 mesh.face_attributes,
-                torch.ones((1, n_faces, 3, 1), device='cuda')
+                torch.ones((1, n_faces, 3, 1), device=device)
             ]
         else:
             face_attributes = mesh.face_attributes
@@ -351,7 +351,7 @@ class Renderer():
             if background is not None:
                 face_attributes = [
                     mesh.face_attributes,
-                    torch.ones((1, n_faces, 3, 1), device='cuda')
+                    torch.ones((1, n_faces, 3, 1), device=device)
                 ]
             else:
                 face_attributes = mesh.face_attributes
