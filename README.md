@@ -15,7 +15,7 @@ conda activate text2mesh
 
 ### System Requirements
 - Python 3.7
-- CUDA 10.2
+- CUDA 11
 - GPU w/ minimum 8 GB ram
 
 ### Run examples
