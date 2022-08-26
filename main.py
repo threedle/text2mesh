@@ -37,8 +37,7 @@ def run_branched(args):
     res = 224 
     if args.clipmodel == "ViT-L/14@336px":
         res = 336
-    print(res)
-
+        
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
     if (not args.overwrite) and os.path.exists(os.path.join(args.output_dir, "loss.png")) and \
