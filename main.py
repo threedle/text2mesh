@@ -37,6 +37,12 @@ def run_branched(args):
     res = 224 
     if args.clipmodel == "ViT-L/14@336px":
         res = 336
+    if args.clipmodel == "RN50x4":
+        res = 288
+    if args.clipmodel == "RN50x16":
+        res = 384
+    if args.clipmodel == "RN50x64":
+        res = 448
         
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
@@ -178,7 +184,7 @@ def run_branched(args):
                                                                 std=args.frontview_std,
                                                                 return_views=True,
                                                                 background=background)
-        rendered_images = preprocess(transforms.ToPILImage()(rendered_images))
+        # rendered_images = torch.stack([preprocess(transforms.ToPILImage()(image)) for image in rendered_images])
     
         if n_augs == 0:
             clip_image = clip_transform(rendered_images)
