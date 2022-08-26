@@ -4,12 +4,10 @@ import kaolin.ops.mesh
 import kaolin as kal
 import torch
 from neural_style_field import NeuralStyleField
-from utils import device
+from utils import device 
 from render import Renderer
 from mesh import Mesh
-from utils import clip_model
 from Normalization import MeshNormalizer
-from utils import preprocess, add_vertices, sample_bary
 import numpy as np
 import random
 import copy
@@ -31,6 +29,9 @@ def run_branched(args):
     np.random.seed(args.seed)
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
+    
+    # Load CLIP model 
+    clip_model, preprocess = clip.load(args.clipmodel, device, jit=args.jit)
 
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
@@ -449,6 +450,7 @@ if __name__ == '__main__':
     parser.add_argument('--no_prompt', default=False, action='store_true')
     parser.add_argument('--exclude', type=int, default=0)
 
+    # Training settings 
     parser.add_argument('--frontview_std', type=float, default=8)
     parser.add_argument('--frontview_center', nargs=2, type=float, default=[0., 0.])
     parser.add_argument('--clipavg', type=str, default=None)
@@ -476,6 +478,10 @@ if __name__ == '__main__':
     parser.add_argument('--only_z', default=False, action='store_true')
     parser.add_argument('--standardize', default=False, action='store_true')
 
+    # CLIP model settings 
+    parser.add_argument('--clipmodel', type=str, default='VIT-B/32')
+    parser.add_argument('--jit', action="store_true")
+    
     args = parser.parse_args()
 
     run_branched(args)
