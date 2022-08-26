@@ -32,6 +32,11 @@ def run_branched(args):
     
     # Load CLIP model 
     clip_model, preprocess = clip.load(args.clipmodel, device, jit=args.jit)
+    
+    # Adjust output resolution depending on model type 
+    res = 224 
+    if args.clipmodel == "ViT-L/14@336px":
+        res = 336
 
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
@@ -52,7 +57,7 @@ def run_branched(args):
             except Exception as e:
                 print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-    render = Renderer()
+    render = Renderer(dim=(res, res))
     mesh = Mesh(args.obj_path)
     MeshNormalizer(mesh)()
 
@@ -70,13 +75,13 @@ def run_branched(args):
     clip_normalizer = transforms.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711))
     # CLIP Transform
     clip_transform = transforms.Compose([
-        transforms.Resize((224, 224)),
+        transforms.Resize((res, res)),
         clip_normalizer
     ])
 
     # Augmentation settings
     augment_transform = transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(1, 1)),
+        transforms.RandomResizedCrop(res, scale=(1, 1)),
         transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
         clip_normalizer
     ])
@@ -87,7 +92,7 @@ def run_branched(args):
     else:
         curcrop = args.normmaxcrop
     normaugment_transform = transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(curcrop, curcrop)),
+        transforms.RandomResizedCrop(res, scale=(curcrop, curcrop)),
         transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
         clip_normalizer
     ])
@@ -102,7 +107,7 @@ def run_branched(args):
 
     # Displacement-only augmentations
     displaugment_transform = transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(args.normmincrop, args.normmincrop)),
+        transforms.RandomResizedCrop(res, scale=(args.normmincrop, args.normmincrop)),
         transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
         clip_normalizer
     ])
@@ -185,7 +190,7 @@ def run_branched(args):
             curcrop += cropupdate
             # print(curcrop)
             normaugment_transform = transforms.Compose([
-                transforms.RandomResizedCrop(224, scale=(curcrop, curcrop)),
+                transforms.RandomResizedCrop(res, scale=(curcrop, curcrop)),
                 transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
                 clip_normalizer
             ])
