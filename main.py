@@ -178,7 +178,7 @@ def run_branched(args):
                                                                 std=args.frontview_std,
                                                                 return_views=True,
                                                                 background=background)
-        # rendered_images = preprocess(rendered_images)
+        rendered_images = preprocess(transforms.ToPILImage(rendered_images))
     
         if n_augs == 0:
             clip_image = clip_transform(rendered_images)
