@@ -5,25 +5,11 @@ import numpy as np
 from torchvision import transforms
 from pathlib import Path
 
-augment_transform = transforms.Compose([
-    transforms.RandomResizedCrop(224, scale=(0.1, 1)),
-    transforms.RandomPerspective(fill=0, p=1, distortion_scale=0.5),
-    # transforms.ColorJitter(hue=0.01, saturation=0.01),
-    transforms.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711))
-])
-
-clip_transform = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711))
-])
-
 if torch.cuda.is_available():
     device = torch.device("cuda:0")
     torch.cuda.set_device(device)
 else:
     device = torch.device("cpu")
-
-clip_model, preprocess = clip.load('ViT-B/32', device, jit=False)
 
 
 def get_camera_from_view(elev, azim, r=3.0):

@@ -4,12 +4,10 @@ import kaolin.ops.mesh
 import kaolin as kal
 import torch
 from neural_style_field import NeuralStyleField
-from utils import device
+from utils import device 
 from render import Renderer
 from mesh import Mesh
-from utils import clip_model
 from Normalization import MeshNormalizer
-from utils import preprocess, add_vertices, sample_bary
 import numpy as np
 import random
 import copy
@@ -31,7 +29,21 @@ def run_branched(args):
     np.random.seed(args.seed)
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
-
+    
+    # Load CLIP model 
+    clip_model, preprocess = clip.load(args.clipmodel, device, jit=args.jit)
+    
+    # Adjust output resolution depending on model type 
+    res = 224 
+    if args.clipmodel == "ViT-L/14@336px":
+        res = 336
+    if args.clipmodel == "RN50x4":
+        res = 288
+    if args.clipmodel == "RN50x16":
+        res = 384
+    if args.clipmodel == "RN50x64":
+        res = 448
+        
     objbase, extension = os.path.splitext(os.path.basename(args.obj_path))
     # Check that isn't already done
     if (not args.overwrite) and os.path.exists(os.path.join(args.output_dir, "loss.png")) and \
@@ -51,7 +63,7 @@ def run_branched(args):
             except Exception as e:
                 print('Failed to delete %s. Reason: %s' % (file_path, e))
 
-    render = Renderer()
+    render = Renderer(dim=(res, res))
     mesh = Mesh(args.obj_path)
     MeshNormalizer(mesh)()
 
@@ -69,13 +81,13 @@ def run_branched(args):
     clip_normalizer = transforms.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711))
     # CLIP Transform
     clip_transform = transforms.Compose([
-        transforms.Resize((224, 224)),
+        transforms.Resize((res, res)),
         clip_normalizer
     ])
 
     # Augmentation settings
     augment_transform = transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(1, 1)),
+        transforms.RandomResizedCrop(res, scale=(1, 1)),
         transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
         clip_normalizer
     ])
@@ -86,7 +98,7 @@ def run_branched(args):
     else:
         curcrop = args.normmaxcrop
     normaugment_transform = transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(curcrop, curcrop)),
+        transforms.RandomResizedCrop(res, scale=(curcrop, curcrop)),
         transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
         clip_normalizer
     ])
@@ -101,7 +113,7 @@ def run_branched(args):
 
     # Displacement-only augmentations
     displaugment_transform = transforms.Compose([
-        transforms.RandomResizedCrop(224, scale=(args.normmincrop, args.normmincrop)),
+        transforms.RandomResizedCrop(res, scale=(args.normmincrop, args.normmincrop)),
         transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
         clip_normalizer
     ])
@@ -172,7 +184,8 @@ def run_branched(args):
                                                                 std=args.frontview_std,
                                                                 return_views=True,
                                                                 background=background)
-
+        # rendered_images = torch.stack([preprocess(transforms.ToPILImage()(image)) for image in rendered_images])
+    
         if n_augs == 0:
             clip_image = clip_transform(rendered_images)
             encoded_renders = clip_model.encode_image(clip_image)
@@ -184,7 +197,7 @@ def run_branched(args):
             curcrop += cropupdate
             # print(curcrop)
             normaugment_transform = transforms.Compose([
-                transforms.RandomResizedCrop(224, scale=(curcrop, curcrop)),
+                transforms.RandomResizedCrop(res, scale=(curcrop, curcrop)),
                 transforms.RandomPerspective(fill=1, p=0.8, distortion_scale=0.5),
                 clip_normalizer
             ])
@@ -449,6 +462,7 @@ if __name__ == '__main__':
     parser.add_argument('--no_prompt', default=False, action='store_true')
     parser.add_argument('--exclude', type=int, default=0)
 
+    # Training settings 
     parser.add_argument('--frontview_std', type=float, default=8)
     parser.add_argument('--frontview_center', nargs=2, type=float, default=[0., 0.])
     parser.add_argument('--clipavg', type=str, default=None)
@@ -476,6 +490,10 @@ if __name__ == '__main__':
     parser.add_argument('--only_z', default=False, action='store_true')
     parser.add_argument('--standardize', default=False, action='store_true')
 
+    # CLIP model settings 
+    parser.add_argument('--clipmodel', type=str, default='VIT-B/32')
+    parser.add_argument('--jit', action="store_true")
+    
     args = parser.parse_args()
 
     run_branched(args)

@@ -266,9 +266,9 @@ class Renderer():
             masks.append(soft_mask)
 
             # Debugging: color where soft mask is 1
-            tmp_rgb = torch.ones((224, 224, 3))
-            tmp_rgb[torch.where(soft_mask.squeeze() == 1)] = torch.tensor([1, 0, 0]).float()
-            rgb_mask.append(tmp_rgb)
+            # tmp_rgb = torch.ones((224, 224, 3))
+            # tmp_rgb[torch.where(soft_mask.squeeze() == 1)] = torch.tensor([1, 0, 0]).float()
+            # rgb_mask.append(tmp_rgb)
 
             if background is not None:
                 image_features, mask = image_features
@@ -291,7 +291,7 @@ class Renderer():
 
         images = torch.cat(images, dim=0).permute(0, 3, 1, 2)
         masks = torch.cat(masks, dim=0)
-        rgb_mask = torch.cat(rgb_mask, dim=0)
+        # rgb_mask = torch.cat(rgb_mask, dim=0)
 
         if show:
             with torch.no_grad():
