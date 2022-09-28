@@ -491,7 +491,7 @@ if __name__ == '__main__':
     parser.add_argument('--standardize', default=False, action='store_true')
 
     # CLIP model settings 
-    parser.add_argument('--clipmodel', type=str, default='VIT-B/32')
+    parser.add_argument('--clipmodel', type=str, default='ViT-B/32')
     parser.add_argument('--jit', action="store_true")
     
     args = parser.parse_args()
