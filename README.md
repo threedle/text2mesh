@@ -111,15 +111,12 @@ python3 remesh.py --obj_path chair.obj --output_path chair-remesh.obj
 
 ## Citation
 ```
-@article{text2mesh,
-    author = {Michel, Oscar
-              and Bar-On, Roi
-              and Liu, Richard
-              and Benaim, Sagie
-              and Hanocka, Rana
-              },
-    title = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
-    journal = {arXiv preprint arXiv:2112.03221},
-    year  = {2021}
+@InProceedings{Michel_2022_CVPR,
+    author    = {Michel, Oscar and Bar-On, Roi and Liu, Richard and Benaim, Sagie and Hanocka, Rana},
+    title     = {Text2Mesh: Text-Driven Neural Stylization for Meshes},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {13492-13502}
 }
 ```
