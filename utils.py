@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 import kaolin as kal
 import clip
 import numpy as np
@@ -394,7 +395,7 @@ class FourierFeatureTransform(torch.nn.Module):
         self.exclude = exclude
         B = torch.randn((num_input_channels, mapping_size)) * scale
         B_sort = sorted(B, key=lambda x: torch.norm(x, p=2))
-        self._B = torch.stack(B_sort)  # for sape
+        self._B = nn.Parameter(torch.stack(B_sort), requires_grad=False)  # for sape
 
     def forward(self, x):
         # assert x.dim() == 4, 'Expected 4D input (got {}D input)'.format(x.dim())

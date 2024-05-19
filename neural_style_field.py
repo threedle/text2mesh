@@ -9,7 +9,9 @@ from utils import device
 class ProgressiveEncoding(nn.Module):
     def __init__(self, mapping_size, T, d=3, apply=True):
         super(ProgressiveEncoding, self).__init__()
-        self._t = 0
+        self._t = nn.Parameter(
+            torch.tensor(0, dtype=torch.float32, device=device), requires_grad=False
+        )
         self.n = mapping_size
         self.T = T
         self.d = d
